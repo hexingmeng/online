@@ -4,6 +4,7 @@
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "uni-app",
+				"enablePullDownRefresh": true,
 				"app-plus": {
 					"titleNView": false //false 为不展示导航栏
 				}
@@ -128,7 +129,8 @@
 			"path": "pages/price/price",
 			"style": {
 				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "我的优惠劵"
 			}
 
 		}
@@ -145,6 +147,18 @@
         }
         ,{
             "path" : "pages/forget/forget",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false //false 为不展示导航栏
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/sousuo/sousuo",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",

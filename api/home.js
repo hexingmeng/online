@@ -16,8 +16,25 @@ const priceindex = (data) => {
 	})
 }
 
+const receive = (data) => {
+	return request({
+		url: `/mobile/user_coupon/receive`,
+		method: 'POST',
+		data
+	})
+}
+
+const coupon = (data) => {
+	return request({
+		url: `/mobile/user_coupon?page=${data.page}&limit=${data.limit}`,
+		method: 'GET'
+	})
+}
+
 // 导出所有的api方法
 export default {
 	homeindex,
-	priceindex
+	priceindex,
+	receive,
+	coupon
 }

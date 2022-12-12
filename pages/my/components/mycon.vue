@@ -64,7 +64,7 @@ export default {
         	// })
 			this.Mycon.forEach((item) => {
 			    if (item.id == id) {
-			      uni.switchTab({
+			      uni.reLaunch({
 			        url: item.pages,
 			      })
 			    }
@@ -84,28 +84,28 @@ export default {
 <style>
 .classify {
   width: 90%;
-  height: 80px;
+  height: 160rpx;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 10rpx;
   display: flex;
   align-content: center;
   justify-content: space-between;
-  box-shadow: 0px 0px 10px 0px #aaa;
+  box-shadow: 0rpx 0rpx 20rpx 0rpx #aaa;
 }
 
 .iconfont {
   color: #f9ba17;
-  margin-top: 20px;
-  font-size: 20px;
-  margin-bottom: 7px;
+  margin-top: 40rpx;
+  font-size: 40rpx;
+  margin-bottom: 14rpx;
 }
 
 .conner {
   width: 20%;
-  height: 80px;
+  height: 160rpx;
   /* background-color: #55ff00; */
   text-align: center;
   color: #6e747c;
-  font-size: 12px;
+  font-size: 24rpx;
 }
 </style>

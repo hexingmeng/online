@@ -49,6 +49,22 @@ const forget=(data)=>{
 	})
 }
 
+const pass=(data)=>{
+	return request({
+		url: `/mobile/update_password`,
+		method: 'POST',
+		data
+	})
+}
+
+const upload=(data)=>{
+	return request({
+		url: `/mobile/update_info`,
+		method: 'POST',
+		data
+	})
+}
+
 
 // 导出所有的api方法
 export default {
@@ -57,5 +73,7 @@ export default {
 	captcha,
 	bind,
 	logout,
-	forget
+	forget,
+	pass,
+	upload
 }

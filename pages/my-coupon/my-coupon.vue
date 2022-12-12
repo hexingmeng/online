@@ -5,7 +5,7 @@
 				账户安全
 			</view>
 			<view class="">
-				>
+				<text class="iconfont icon-jiantou" style="font-weight: 900;color: #ccc;"></text>
 			</view>
 		</view>
 		<view class="dacon" @click="clear">
@@ -21,7 +21,7 @@
 				检查更新
 			</view>
 			<view class="">
-				>
+				<text class="iconfont icon-jiantou" style="font-weight: 900;color: #ccc;"></text>
 			</view>
 		</view>
 		<view class="datop">

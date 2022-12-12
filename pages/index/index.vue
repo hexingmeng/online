@@ -10,7 +10,7 @@
 			<classify :ify="ify"></classify>
 		</view>
 		<view class="csale">
-			<price :sale="sale"></price>
+			<price :sale="sale" @getNum="getNum"></price>
 		</view>
 	</view>
 </template>
@@ -31,6 +31,7 @@
 				ify:"",
 				sale:""
 			}
+			
 		},
 		components: {
 			search,
@@ -44,6 +45,17 @@
 			this.prsale();
 		},
 		methods: {
+			
+			onPullDownRefresh() {
+			    console.log('pull down refresh')
+			  setTimeout(function () {
+			    uni.stopPullDownRefresh();
+			  }, 1000);
+			},
+			onReachBottom(){
+			  console.log('上拉')
+			  //this.getData();//加载
+			},
 			async getHome() {
 				const a = await home.homeindex(this.form)
 				this.home = a[1].data
@@ -58,6 +70,10 @@
 				const a = await home.priceindex(this.form)
 				this.sale = a
 				console.log("this.home=>", this.sale)
+			},
+			async getNum(){
+				const a = await home.priceindex(this.form)
+				this.sale = a
 			}
 		}
 	}

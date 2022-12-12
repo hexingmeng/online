@@ -1,11 +1,11 @@
 <template>
 	<view>
-		<view class="datop">
+		<view class="datop" @click="handleUpload">
 			<view class="datopleft">
 				头像
 			</view>
 			<view class="datopright">
-				<image src="../../static/c1.png" mode=""></image>
+				<image src="../../static/c1.png" mode="" v-model="avatar"></image>
 			</view>
 		</view>
 		<view class="dacon">
@@ -13,7 +13,7 @@
 				昵称
 			</view>
 			<view class="">
-				<input class="uni-input-input" placeholder="未填写">
+				<input class="uni-input-input" placeholder="未填写" v-model="nickname">
 			</view>
 		</view>
 		<view class="datop">
@@ -41,11 +41,16 @@
 		data() {
 			return {
 				form: {
-					response: uni.getStorageSync("userinfo")
+					response: uni.getStorageSync("userinfo"),
+					avatar:"",
+					nickname:"",
+					sex:""
 				}
 			};
 		},
-		methods: {}
+		methods: {
+			
+		}
 	}
 </script>
 

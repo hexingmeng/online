@@ -1,6 +1,6 @@
 <template>
 	<view class="">
-		<view class="topcon">
+		<view class="topcon" @click="sousuo">
 			<text class="iconfont icon-search"></text>
 			请输入搜索关键词
 		</view>
@@ -8,6 +8,19 @@
 </template>
 
 <script>
+	export default {
+		data() {
+			return {
+			}
+		},
+		methods:{
+			sousuo(){
+				uni.navigateTo({
+					url: "/pages/index/sousuo/sousuo"
+				})
+			}
+		}
+	}
 </script>
 
 <style>

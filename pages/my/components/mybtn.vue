@@ -3,7 +3,8 @@
 		<view class="box-box" v-for="item in SetList" :key="item.id" @click="NavGetTo(item)">
 			<view class="iconfont leftright" :class="item.icon"></view>
 			<view class="title">{{item.title}}</view>
-			<view class="iconfont rightIcon" :class="item.rightIcon">></view>
+			<view class="iconfont rightIcon" :class="item.rightIcon">
+			<text class="iconfont icon-jiantou" style="font-weight: 900;"></text></view>
 		</view>
 	</view>
 </template>
@@ -82,7 +83,7 @@
 	.box {
 		width: 100%;
 		padding: 30rpx 20rpx 0;
-		font-size: 14px;
+		font-size: 28rpx;
 
 		.box-box {
 			width: 94%;
@@ -109,7 +110,7 @@
 			.rightIcon {
 				width: 7%;
 				color: #bbbbbb;
-				font-size: 14px;
+				font-size: 28rpx;
 				height: 50rpx;
 				line-height: 50rpx;
 				color: #bcbcbc;

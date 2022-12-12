@@ -16,10 +16,9 @@
 	/*每个页面公共css */
 	// 引入公共样式
 	@import url("@/common/free.css");
-	
 	// 图标
 	@import "common/iconfont.css";
-	@import url('@/static/iconfont/iconfont.css');
+	/* @import url('@/static/iconfont/iconfont.css'); */
 	// 动画
 	@import url('@/common/animate.min.css');
 	/*每个页面公共css */

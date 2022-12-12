@@ -9,7 +9,7 @@
 		</view>
 		<view v-else @click="Navedit" class="message">
 			<view class="name">{{Mytop.username}}</view>
-			<view class="describe">{{Mytop.desc}}</view>
+			<view class="describe">暂无描述</view>
 		</view>
 		<view class="icon iconfont icon-add" v-if="Mytop.username"></view>
 	</view>
