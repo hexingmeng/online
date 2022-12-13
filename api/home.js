@@ -31,10 +31,18 @@ const coupon = (data) => {
 	})
 }
 
+const search = (data) => {
+	return request({
+		url: `/mobile/search?keyword=${data.keyword}&page=${data.page}&type=${data.type}`,
+		method: 'GET'
+	})
+}
+
 // 导出所有的api方法
 export default {
 	homeindex,
 	priceindex,
 	receive,
-	coupon
+	coupon,
+	search
 }

@@ -16,7 +16,7 @@
 		methods:{
 			sousuo(){
 				uni.navigateTo({
-					url: "/pages/index/sousuo/sousuo"
+					url: "/pages/index/Souu"
 				})
 			}
 		}

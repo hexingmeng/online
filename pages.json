@@ -158,7 +158,7 @@
             
         }
         ,{
-            "path" : "pages/index/sousuo/sousuo",
+            "path" : "pages/index/nisousuo",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
@@ -167,8 +167,18 @@
 					"titleNView": false //false 为不展示导航栏
 				}
             }
-            
         }
+		,{
+		    "path" : "pages/index/Souu",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false //false 为不展示导航栏
+				}
+		    }
+		}
     ],
 	"tabBar": {
 		"backgroundColor": "#ffffff",
