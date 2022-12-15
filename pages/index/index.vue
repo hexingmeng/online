@@ -12,6 +12,20 @@
 		<view class="csale">
 			<price :sale="sale" @getNum="getNum"></price>
 		</view>
+		<view class="henggang">
+			
+		</view>
+		<view class="cook">
+			<booking :add="add"></booking>
+		</view>
+		<view class="heng">
+		</view>
+		<view class="">
+			<list :love="love"></list>
+		</view>
+		<view class="">
+			<conimg :mone="mone" @click="tiaozhuan"></conimg>
+		</view>
 	</view>
 </template>
 
@@ -21,31 +35,38 @@
 	import slideshow from "@/pages/index/components/slideshow.vue"
 	import classify from "@/pages/index/components/classify.vue"
 	import price from "@/pages/index/components/price.vue"
+	import booking from "@/pages/index/components/booking.vue"
+	import list from "@/pages/index/components/list.vue"
+	import conimg from "@/pages/index/components/conimg.vue"
 	export default {
 		data() {
 			return {
 				form: {
-					
 				},
 				home: "",
 				ify:"",
-				sale:""
+				sale:"",
+				add:"",
+				love:"",
+				mone:""
 			}
-			
 		},
 		components: {
 			search,
 			slideshow,
 			classify,
-			price
+			price,
+			booking,
+			list,
+			conimg
 		},
 		onLoad() {
 			this.getHome();
 			this.indexify();
 			this.prsale();
+			this.book()
 		},
 		methods: {
-			
 			onPullDownRefresh() {
 			    console.log('pull down refresh')
 			  setTimeout(function () {
@@ -64,16 +85,29 @@
 			async indexify(){
 				const a = await home.homeindex(this.form)
 				this.ify = a[2].data
-				// console.log("this.home=>", this.ify)
+				this.love = a[5].data
+				this.mone=a[6]
+				// if(){
+					
+				// }
+				console.log("this.home=>", this.mone)
 			},
 			async prsale(){
 				const a = await home.priceindex(this.form)
 				this.sale = a
-				console.log("this.home=>", this.sale)
+				// console.log("this.home=>", this.sale)
 			},
 			async getNum(){
 				const a = await home.priceindex(this.form)
 				this.sale = a
+			},
+			async book(){
+				const usable={
+					usable:1
+				}
+				const a=await home.group(usable)
+				this.add=a.rows
+				// console.log("a",this.add);
 			}
 		}
 	}
@@ -100,7 +134,18 @@
 	}
 	.csale{
 		width: 94%;
-		height: 156rpx;
-		padding: 10rpx 20rpx;
+		height: 136rpx;
+		padding: 10rpx 20rpx 0rpx;
+	}
+	.henggang{
+		width: 100%;
+		height: 14rpx;
+		background-color: #f5f5f3;
+	}
+	.heng{
+		width: 100%;
+		height: 14rpx;
+		background-color: #f5f5f3;
+		margin-top: 20rpx;
 	}
 </style>

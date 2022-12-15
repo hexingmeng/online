@@ -179,6 +179,15 @@
 				}
 		    }
 		}
+        ,{
+            "path" : "pages/slide/slide",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"tabBar": {
 		"backgroundColor": "#ffffff",

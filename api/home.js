@@ -38,11 +38,19 @@ const search = (data) => {
 	})
 }
 
+const group = (data) => {
+	return request({
+		url: `/mobile/group?usable=${data.usable}`,
+		method: 'GET'
+	})
+}
+
 // 导出所有的api方法
 export default {
 	homeindex,
 	priceindex,
 	receive,
 	coupon,
-	search
+	search,
+	group
 }

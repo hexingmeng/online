@@ -1,5 +1,5 @@
 <template>
-	<view class="lbt">
+	<view class="lbt" >
 		<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000">
 			<swiper-item class="ddd" v-for="(item,index) in home" :key="item.id">
 				<image :src="item.src" mode=""></image>
@@ -16,10 +16,16 @@
 				form: {
 					// response: uni.getStorageSync("userinfo"),
 				},
-				
 			}
 		},
-		
+		methods:{
+			// tiaozhuan(){
+			// 	const a=home[0].src
+			// 	uni.navigateTo({
+			// 		url: "/pages/slide/slide"
+			// 	})
+			// }
+		}
 	}
 </script>
 
