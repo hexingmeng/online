@@ -1,6 +1,6 @@
 <template>
-	<view>
-		111
+	<view >
+		<web-view :src="kiss"></web-view>
 	</view>
 </template>
 
@@ -8,8 +8,11 @@
 	export default {
 		data() {
 			return {
-				
+				kiss:""
 			};
+		},
+		onLoad(option) {
+			this.kiss=option.url
 		}
 	}
 </script>

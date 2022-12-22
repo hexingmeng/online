@@ -4,7 +4,7 @@
 			拼团
 		</view>
 		<view class="cookcon">
-			<view class="concon" v-for="(item,index) in add" :key="index">
+			<view class="concon" v-for="(item,index) in add" :key="index" @click="babra(item)">
 				<image :src="item.cover" mode=""></image>
 				<p>{{item.title}}</p>
 				<view class="mianfei">
@@ -24,7 +24,12 @@
 			return {}
 		},
 		methods: {
-
+			babra(item){
+				console.log(item);
+				uni.navigateTo({
+					url: `/pages/course/course?id=${item.id}`
+				})
+			}
 		}
 	}
 </script>

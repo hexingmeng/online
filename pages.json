@@ -133,54 +133,132 @@
 				"navigationBarTitleText": "我的优惠劵"
 			}
 
-		}
-	    ,{
-            "path" : "pages/number/number",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false,
+		}, {
+			"path": "pages/number/number",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"navigationBarTitleText": "修改密码",
 				"navigationBarBackgroundColor": "#fff"
-            }
-            
-        }
-        ,{
-            "path" : "pages/forget/forget",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false,
+			}
+
+		}, {
+			"path": "pages/forget/forget",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"app-plus": {
 					"titleNView": false //false 为不展示导航栏
 				}
-            }
-            
-        }
-        ,{
-            "path" : "pages/index/nisousuo",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false,
+			}
+
+		}, {
+			"path": "pages/index/nisousuo",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"app-plus": {
 					"titleNView": false //false 为不展示导航栏
 				}
-            }
-        }
-		,{
-		    "path" : "pages/index/Souu",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "",
-		        "enablePullDownRefresh": false,
+			}
+		}, {
+			"path": "pages/index/Souu",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"app-plus": {
 					"titleNView": false //false 为不展示导航栏
 				}
-		    }
+			}
+		}, {
+			"path": "pages/problem/slide/slide",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/problem/test/test",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 150,
+				"backgroundColor": "#F8F8F8",
+				"navigationBarTitleText": "考场列表",
+				"navigationBarBackgroundColor": "#fff"
+			}
+
+		}, {
+			"path": "pages/problem/flashsale/flashsale",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "秒杀列表",
+				"navigationBarBackgroundColor": "#fff"
+			}
+
+		}, {
+			"path": "pages/problem/live/live",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "直播列表",
+				"navigationBarBackgroundColor": "#fff"
+			}
+
+		}, {
+			"path": "pages/problem/column/column",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 150,
+				"navigationBarTitleText": "专栏列表",
+				"navigationBarBackgroundColor": "#fff"
+			}
+
+		}, {
+			"path": "pages/problem/book/book",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/problem/bbs/bbs",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/problem/group/group",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "拼团列表",
+				"navigationBarBackgroundColor": "#fff"
+			}
+
+		}, {
+			"path": "pages/problem/phone/phone",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
 		}
+	    ,{
+            "path" : "pages/problem/test/exam/exam",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
         ,{
-            "path" : "pages/slide/slide",
+            "path" : "pages/course/course",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",

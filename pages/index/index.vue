@@ -24,7 +24,7 @@
 			<list :love="love"></list>
 		</view>
 		<view class="">
-			<conimg :mone="mone" @click="tiaozhuan"></conimg>
+			<conimg :mone="mone"></conimg>
 		</view>
 	</view>
 </template>
@@ -48,7 +48,8 @@
 				sale:"",
 				add:"",
 				love:"",
-				mone:""
+				mone:"",
+				lbt:""
 			}
 		},
 		components: {
@@ -80,17 +81,17 @@
 			async getHome() {
 				const a = await home.homeindex(this.form)
 				this.home = a[1].data
+				this.lbt=a[1].data[1].src
 				// console.log("this.home=>", this.home)
+				
 			},
 			async indexify(){
 				const a = await home.homeindex(this.form)
 				this.ify = a[2].data
 				this.love = a[5].data
 				this.mone=a[6]
-				// if(){
-					
-				// }
-				console.log("this.home=>", this.mone)
+				
+				console.log("this.love=>", this.love)
 			},
 			async prsale(){
 				const a = await home.priceindex(this.form)
@@ -108,7 +109,7 @@
 				const a=await home.group(usable)
 				this.add=a.rows
 				// console.log("a",this.add);
-			}
+			},
 		}
 	}
 </script>

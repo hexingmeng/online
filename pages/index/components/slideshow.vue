@@ -2,7 +2,7 @@
 	<view class="lbt" >
 		<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000">
 			<swiper-item class="ddd" v-for="(item,index) in home" :key="item.id">
-				<image :src="item.src" mode=""></image>
+				<image :src="item.src" mode="" @click="phone(item)"></image>
 			</swiper-item>
 		</swiper>
 	</view>
@@ -14,17 +14,26 @@
 		data() {
 			return {
 				form: {
-					// response: uni.getStorageSync("userinfo"),
+					
 				},
 			}
 		},
 		methods:{
-			// tiaozhuan(){
-			// 	const a=home[0].src
-			// 	uni.navigateTo({
-			// 		url: "/pages/slide/slide"
-			// 	})
-			// }
+			phone(item) {
+				// console.log(item);
+				if (item.url) {
+					console.log(item);
+					uni.navigateTo({
+						url: `/pages/problem/slide/slide?url=${item.url}`
+					})
+					return
+				}else if(!item.url){
+					uni.navigateTo({
+						url: `/pages/course/course?id=${item.course_id}`
+					})
+					return
+				}
+			}
 		}
 	}
 </script>
