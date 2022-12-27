@@ -11,7 +11,7 @@
 				</view>
 			</view>
 			<view class="testcon">
-				<view :class="item.is_test===false ? 'annuaaa' : 'annu'" @click="qiehuan">
+				<view :class="item.is_test===false ? 'annuaaa' : 'annu'" @click="qiehuan(item)">
 					{{item.is_test ?  '你考过了' : '参加考试'}}
 				</view>
 			</view>
@@ -48,14 +48,15 @@
 					this.adda.push(item)
 				});
 			},
-			qiehuan() {
+			qiehuan(item) {
 				// this.is_test = !this.is_test
+				console.log("aaa",item);
 				uni.showModal({
 					content: '是否要开始考试？',
 					success: function(res) {
 						if (res.confirm) {
 							uni.navigateTo({
-								url: "/pages/problem/test/exam/exam"
+								url: `/pages/test-detail/test-detail?id=${item.id}`
 							})
 							uni.removeStorageSync("userinfo")
 						} else {

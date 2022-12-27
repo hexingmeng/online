@@ -13,6 +13,8 @@
 			"path": "pages/learn/learn",
 			"style": {
 				"navigationBarTitleText": "",
+				"navigationBarTitleText": "学习进度",
+				"navigationBarBackgroundColor": "#fff",
 				"enablePullDownRefresh": false
 			}
 
@@ -227,7 +229,10 @@
 			"path": "pages/problem/bbs/bbs",
 			"style": {
 				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false //false 为不展示导航栏
+				}
 			}
 
 		},
@@ -259,6 +264,42 @@
         }
         ,{
             "path" : "pages/course/course",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my-post/my-post",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my-test/my-test",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my-book/my-book",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/test-detail/test-detail",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",

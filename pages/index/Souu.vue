@@ -1,18 +1,29 @@
 <template>
-	<view class="index-top">
-		<view class="jiantou" @click="fanhui">
-			<image src="../../static/xiangzuo.png" mode=""></image>
-		</view>
-		<view class="topcon">
-			<text class="iconfont icon-search"></text>
-			<input class="uni-input-input" placeholder="输入搜索关键字" v-model="input">
-			<view class="shanchu" v-if="input">
-				X
+	<view class="">
+		<view class="index-top">
+			<view class="jiantou" @click="fanhui">
+				<image src="../../static/xiangzuo.png" mode=""></image>
 			</view>
-
+			<view class="topcon">
+				<text class="iconfont icon-search"></text>
+				<input class="uni-input-input" placeholder="输入搜索关键字" v-model="input">
+				<view class="shanchu" v-if="input">
+					X
+				</view>
+		
+			</view>
+			<view class="sous" @click="sea">
+				搜索
+			</view>
 		</view>
-		<view class="sous" @click="sea">
-			搜索
+		<view class="px-2">
+			<!-- 搜索栏标题 -->
+			<view class="flex justify-between align-center py-3">
+				<text class="font-md font-weight-bold">历史记录</text>
+				<text class="font-sm text-light-muted" @click="handleHistoryClear">清除全部</text>
+			</view>
+		
+			
 		</view>
 	</view>
 </template>

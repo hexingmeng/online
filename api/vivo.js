@@ -40,6 +40,20 @@ const vivoshop =(data)=>{
 	})
 }
 
+const vivobbss = (data) => {
+	return request({
+		url: `/mobile/bbs?page=${data.page}`,
+		method: 'GET'
+	})
+}
+
+const vivobbsdet = (data) => {
+	return request({
+		url: `/mobile/post/list?page=${data.page}&keyword=${data.keyword}&bbs_id=${data.bbs_id}`,
+		method: 'GET'
+	})
+}
+
 // 导出所有的api方法
 export default {
 	vivotest,
@@ -47,5 +61,7 @@ export default {
 	vivogroup,
 	vivolive,
 	vivocolumn,
-	vivoshop
+	vivoshop,
+	vivobbss,
+	vivobbsdet
 }
